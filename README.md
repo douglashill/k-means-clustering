@@ -1,6 +1,6 @@
 # DHClustering #
 
-An implementation of the k-means closeting algorithm in Objective-C.
+An implementation of the k-means clustering algorithm in Objective-C.
 
 ## Status ##
 
@@ -12,7 +12,7 @@ The Foundation framework
 
 ## Usage ##
 
-Implement the `KMVector` protocol. Call the function.
+Implement the `KMVector` protocol. Call `clustersWithInitialMeansAndObservations`.
 
 ## Licence ##
 
