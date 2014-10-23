@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A52B17DC19BC7AA600147332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A52B17DB19BC7AA600147332 /* main.m */; };
+		A52B17DF19BC7AC500147332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A52B17DE19BC7AC500147332 /* AppDelegate.m */; };
+		A52B17E119BC7AD900147332 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52B17E019BC7AD900147332 /* Images.xcassets */; };
+		A54A75E319BC7816001DFB4F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54A75E219BC7816001DFB4F /* MainMenu.xib */; };
+		A54F883419F9B6B000200B03 /* KMCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = A54F883319F9B6B000200B03 /* KMCluster.m */; };
+		A54F883719F9B8C300200B03 /* KMClustering.m in Sources */ = {isa = PBXBuildFile; fileRef = A54F883619F9B8C300200B03 /* KMClustering.m */; };
+		A54F883A19F9BA5900200B03 /* NSSet+DHMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A54F883919F9BA5900200B03 /* NSSet+DHMap.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A52B17DB19BC7AA600147332 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		A52B17DD19BC7AC500147332 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		A52B17DE19BC7AC500147332 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		A52B17E019BC7AD900147332 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
+		A54A75AB19BC74E2001DFB4F /* Clustering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clustering.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54A75E219BC7816001DFB4F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		A54A75E419BC78EC001DFB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		A54F883119F9B66600200B03 /* KMVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMVector.h; sourceTree = "<group>"; };
+		A54F883219F9B6B000200B03 /* KMCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMCluster.h; sourceTree = "<group>"; };
+		A54F883319F9B6B000200B03 /* KMCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMCluster.m; sourceTree = "<group>"; };
+		A54F883519F9B8C300200B03 /* KMClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMClustering.h; sourceTree = "<group>"; };
+		A54F883619F9B8C300200B03 /* KMClustering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMClustering.m; sourceTree = "<group>"; };
+		A54F883819F9BA5900200B03 /* NSSet+DHMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+DHMap.h"; sourceTree = "<group>"; };
+		A54F883919F9BA5900200B03 /* NSSet+DHMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+DHMap.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A54A75A819BC74E2001DFB4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A54A75A219BC74E2001DFB4F = {
+			isa = PBXGroup;
+			children = (
+				A54A75E519BC79A7001DFB4F /* DHClustering */,
+				A54A75B419BC74E2001DFB4F /* Example */,
+				A54A75AC19BC74E2001DFB4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A54A75AC19BC74E2001DFB4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A54A75AB19BC74E2001DFB4F /* Clustering.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A54A75B419BC74E2001DFB4F /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				A52B17DB19BC7AA600147332 /* main.m */,
+				A52B17DD19BC7AC500147332 /* AppDelegate.h */,
+				A52B17DE19BC7AC500147332 /* AppDelegate.m */,
+				A54A75E219BC7816001DFB4F /* MainMenu.xib */,
+				A54A75E419BC78EC001DFB4F /* Info.plist */,
+				A52B17E019BC7AD900147332 /* Images.xcassets */,
+			);
+			name = Example;
+			path = Clustering;
+			sourceTree = "<group>";
+		};
+		A54A75E519BC79A7001DFB4F /* DHClustering */ = {
+			isa = PBXGroup;
+			children = (
+				A54F883519F9B8C300200B03 /* KMClustering.h */,
+				A54F883619F9B8C300200B03 /* KMClustering.m */,
+				A54F883119F9B66600200B03 /* KMVector.h */,
+				A54F883219F9B6B000200B03 /* KMCluster.h */,
+				A54F883319F9B6B000200B03 /* KMCluster.m */,
+				A54F883819F9BA5900200B03 /* NSSet+DHMap.h */,
+				A54F883919F9BA5900200B03 /* NSSet+DHMap.m */,
+			);
+			name = DHClustering;
+			path = ../DHClustering;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A54A75AA19BC74E2001DFB4F /* Clustering */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A54A75DC19BC74E2001DFB4F /* Build configuration list for PBXNativeTarget "Clustering" */;
+			buildPhases = (
+				A54A75A719BC74E2001DFB4F /* Sources */,
+				A54A75A819BC74E2001DFB4F /* Frameworks */,
+				A54A75A919BC74E2001DFB4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clustering;
+			productName = Clustering;
+			productReference = A54A75AB19BC74E2001DFB4F /* Clustering.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A54A75A319BC74E2001DFB4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Douglas Hill";
+			};
+			buildConfigurationList = A54A75A619BC74E2001DFB4F /* Build configuration list for PBXProject "Clustering" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A54A75A219BC74E2001DFB4F;
+			productRefGroup = A54A75AC19BC74E2001DFB4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A54A75AA19BC74E2001DFB4F /* Clustering */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A54A75A919BC74E2001DFB4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54A75E319BC7816001DFB4F /* MainMenu.xib in Resources */,
+				A52B17E119BC7AD900147332 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A54A75A719BC74E2001DFB4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A52B17DF19BC7AC500147332 /* AppDelegate.m in Sources */,
+				A54F883A19F9BA5900200B03 /* NSSet+DHMap.m in Sources */,
+				A54F883719F9B8C300200B03 /* KMClustering.m in Sources */,
+				A52B17DC19BC7AA600147332 /* main.m in Sources */,
+				A54F883419F9B6B000200B03 /* KMCluster.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A54A75DA19BC74E2001DFB4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A54A75DB19BC74E2001DFB4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A54A75DD19BC74E2001DFB4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A54A75DE19BC74E2001DFB4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A54A75A619BC74E2001DFB4F /* Build configuration list for PBXProject "Clustering" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54A75DA19BC74E2001DFB4F /* Debug */,
+				A54A75DB19BC74E2001DFB4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A54A75DC19BC74E2001DFB4F /* Build configuration list for PBXNativeTarget "Clustering" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54A75DD19BC74E2001DFB4F /* Debug */,
+				A54A75DE19BC74E2001DFB4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A54A75A319BC74E2001DFB4F /* Project object */;
+}
