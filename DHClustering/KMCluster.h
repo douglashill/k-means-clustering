@@ -1,5 +1,5 @@
 // Douglas Hill, October 2014
-// https://github.com/douglashill/DHClustering
+// https://github.com/douglashill/k-means-clustering
 
 @import Foundation;
 #import "KMVector.h"
