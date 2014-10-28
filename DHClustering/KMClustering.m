@@ -22,6 +22,7 @@ NSSet *clustersWithInitialMeansAndObservations(NSSet *initalMeans, NSSet *observ
 		NSSet *const oldClusters = clusters;
 		clusters = clustersUpdatedWithObservations(clusters, observationVectors);
 		
+		// This does not seem to work, and is not the proper way to determine convergence.
 		NSString *const meanKey = NSStringFromSelector(@selector(mean));
 		if ([[clusters valueForKey:meanKey] isEqualToSet:[oldClusters valueForKey:meanKey]]) {
 			*stop = YES;
