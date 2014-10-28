@@ -54,9 +54,9 @@ static NSSet *clustersUpdatedWithObservations(NSSet *originalClusters, NSSet *ob
 		[nearestCluster addObservationVector:observation];
 	}
 	
-	for (KMCluster *cluster in clusters) {
+	[clusters enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(KMCluster *cluster, BOOL *stop) {
 		[cluster updateMean];
-	}
+	}];
 	
 	return clusters;
 }
