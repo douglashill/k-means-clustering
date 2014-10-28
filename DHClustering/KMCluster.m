@@ -39,7 +39,17 @@
 
 - (void)updateMean
 {
-	[self setMean:[[[self mean] class] meanOfVectors:[self observationVectors]]];
+	if ([[self observationVectors] count] == 0) {
+		return;
+	}
+	
+	id <KMVector> newMean = [[[self mean] class] meanOfVectors:[self observationVectors]];
+	
+	if (newMean == nil) {
+		[NSException raise:NSInternalInconsistencyException format:@"meanOfVectors: must not return nil unless there are no observation vectors."];
+	}
+	
+	[self setMean:newMean];
 }
 
 - (void)addObservationVector:(id <KMVector>)observation
