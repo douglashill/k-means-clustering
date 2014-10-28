@@ -6,7 +6,7 @@
 @interface KMCluster ()
 
 @property (nonatomic, strong) id <KMVector> mean;
-@property (nonatomic, strong, readonly) NSMutableSet *observationVectors;
+@property (nonatomic, strong, readonly) NSMutableSet *mutableObservationVectors;
 
 @end
 
@@ -32,7 +32,7 @@
 	}
 	
 	_mean = initialMean;
-	_observationVectors = [NSMutableSet set];
+	_mutableObservationVectors = [NSMutableSet set];
 	
 	return self;
 }
@@ -52,9 +52,14 @@
 	[self setMean:newMean];
 }
 
+- (NSSet *)observationVectors
+{
+	return [self mutableObservationVectors];
+}
+
 - (void)addObservationVector:(id <KMVector>)observation
 {
-	[[self observationVectors] addObject:observation];
+	[[self mutableObservationVectors] addObject:observation];
 }
 
 - (NSString *)description

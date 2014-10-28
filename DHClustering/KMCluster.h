@@ -17,6 +17,8 @@
 /// Recalculates `mean` from the observation vectors.
 - (void)updateMean;
 
+@property (nonatomic, strong, readonly) NSSet *observationVectors;
+
 /// Does not change the mean until `updateMean` is called.
 - (void)addObservationVector:(id <KMVector>)observation;
 
