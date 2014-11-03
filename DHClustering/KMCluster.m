@@ -54,12 +54,12 @@
 
 - (NSSet *)observationVectors
 {
-	return [self mutableObservationVectors];
+	return _mutableObservationVectors;
 }
 
 - (void)addObservationVector:(id <KMVector>)observation
 {
-	[[self mutableObservationVectors] addObject:observation];
+	[_mutableObservationVectors addObject:observation];
 }
 
 - (NSString *)description
