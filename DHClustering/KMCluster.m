@@ -27,10 +27,6 @@
 	self = [super init];
 	if (self == nil) return nil;
 	
-	if (initialMean == nil) {
-		[NSException raise:NSInvalidArgumentException format:@"%@ can not be initialised without a mean.", [self class]];
-	}
-	
 	_mean = initialMean;
 	_mutableObservationVectors = [NSMutableSet set];
 	
@@ -43,7 +39,7 @@
 		return;
 	}
 	
-	id <KMVector> newMean = [[[self mean] class] meanOfVectors:[self observationVectors]];
+	id <KMVector> newMean = [[[[self observationVectors] anyObject] class] meanOfVectors:[self observationVectors]];
 	
 	if (newMean == nil) {
 		[NSException raise:NSInternalInconsistencyException format:@"meanOfVectors: must not return nil unless there are no observation vectors."];
