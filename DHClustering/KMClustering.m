@@ -41,11 +41,11 @@ static NSSet *clustersUpdatedWithObservations(NSSet *originalClusters, NSSet *ob
 	for (id <KMVector> observation in observationVectors) {
 		// assign data points to cluster with nearest center
 		
-		double minimumDistance = HUGE;
+		float minimumDistance = MAXFLOAT;
 		KMCluster *nearestCluster;
 		
 		for (KMCluster *cluster in clusters) {
-			double const distance = [observation distanceFromVector:[cluster mean]];
+			float const distance = [observation distanceFromVector:[cluster mean]];
 			if (distance < minimumDistance) {
 				minimumDistance = distance;
 				nearestCluster = cluster;

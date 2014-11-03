@@ -5,6 +5,6 @@
 
 + (id <KMVector>)meanOfVectors:(NSSet *)vectors;
 
-- (double)distanceFromVector:(id <KMVector>)otherVector;
+- (float)distanceFromVector:(id <KMVector>)otherVector;
 
 @end
