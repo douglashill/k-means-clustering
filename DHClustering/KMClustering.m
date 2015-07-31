@@ -7,14 +7,14 @@
 #import "NSSet+DHMap.h"
 
 /// Runs a single iteration of the k-means clustering algorithm.
-static NSSet *clustersUpdatedWithObservations(NSSet *clusters, NSSet *observationVectors);
+static NSSet<KMCluster *> *clustersUpdatedWithObservations(NSSet<KMCluster *> *clusters, NSSet<id<KMVector>> *observationVectors);
 
 /// Repeat the block a given number of times.
 static void repeat(NSUInteger repeatCount, void (^blockToRepeat)(BOOL *stop));
 
-NSSet *clustersWithInitialMeansAndObservations(NSSet *initalMeans, NSSet *observationVectors, NSUInteger maxIterations)
+NSSet<KMCluster *> *clustersWithInitialMeansAndObservations(NSSet<id<KMVector>> *initialMeans, NSSet<id<KMVector>> *observationVectors, NSUInteger maxIterations)
 {
-	__block NSSet *clusters = [initalMeans dh_setByMappingObjectsUsingMap:^id(id <KMVector> mean) {
+	__block NSSet *clusters = [initialMeans dh_setByMappingObjectsUsingMap:^id (id<KMVector> mean) {
 		return [KMCluster clusterWithMean:mean];
 	}];
 	
@@ -32,13 +32,15 @@ NSSet *clustersWithInitialMeansAndObservations(NSSet *initalMeans, NSSet *observ
 	return clusters;
 }
 
-static NSSet *clustersUpdatedWithObservations(NSSet *originalClusters, NSSet *observationVectors)
+static NSSet<KMCluster *> *clustersUpdatedWithObservations(NSSet<KMCluster *> *originalClusters, NSSet<id<KMVector>> *observationVectors)
 {
-	NSSet *const clusters = [originalClusters dh_setByMappingObjectsUsingMap:^id (KMCluster *originalCluster) {
+	CFAbsoluteTime startTime = CACurrentMediaTime();
+	
+	NSSet<KMCluster *> *const clusters = [originalClusters dh_setByMappingObjectsUsingMap:^id (KMCluster *originalCluster) {
 		return [KMCluster clusterWithMean:[originalCluster mean]];
 	}];
 	
-	for (id <KMVector> observation in observationVectors) {
+	for (id<KMVector> observation in observationVectors) {
 		// assign data points to cluster with nearest center
 		
 		float minimumDistance = MAXFLOAT;
@@ -59,6 +61,7 @@ static NSSet *clustersUpdatedWithObservations(NSSet *originalClusters, NSSet *ob
 		[cluster updateMean];
 	}];
 	
+	NSLog(@"Time to run: %.2fms", 1000 * (CACurrentMediaTime() - startTime));
 	return clusters;
 }
 

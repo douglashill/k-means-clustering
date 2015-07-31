@@ -5,24 +5,24 @@
 
 @interface KMCluster ()
 
-@property (nonatomic, strong) id <KMVector> mean;
-@property (nonatomic, strong, readonly) NSMutableSet *mutableObservationVectors;
+@property (nonatomic, strong) id<KMVector> mean;
+@property (nonatomic, strong, readonly) NSMutableSet<id<KMVector>> *mutableObservationVectors;
 
 @end
 
 @implementation KMCluster
 
-+ (instancetype)clusterWithMean:(id <KMVector>)initialMean
++ (instancetype)clusterWithMean:(id<KMVector>)initialMean
 {
 	return [[self alloc] initWithMean:initialMean];
 }
 
 - (instancetype)init
 {
-	return [self initWithMean:nil];
+	return [self initWithMean:(id __nonnull)nil];
 }
 
-- (instancetype)initWithMean:(id <KMVector>)initialMean
+- (instancetype)initWithMean:(id<KMVector>)initialMean
 {
 	self = [super init];
 	if (self == nil) return nil;
@@ -43,7 +43,7 @@
 		return;
 	}
 	
-	id <KMVector> newMean = [[[self mean] class] meanOfVectors:[self observationVectors]];
+	id<KMVector> newMean = [[[self mean] class] meanOfVectors:[self observationVectors]];
 	
 	if (newMean == nil) {
 		[NSException raise:NSInternalInconsistencyException format:@"meanOfVectors: must not return nil unless there are no observation vectors."];
@@ -52,12 +52,12 @@
 	[self setMean:newMean];
 }
 
-- (NSSet *)observationVectors
+- (NSSet<id<KMVector>> *)observationVectors
 {
 	return _mutableObservationVectors;
 }
 
-- (void)addObservationVector:(id <KMVector>)observation
+- (void)addObservationVector:(id<KMVector>)observation
 {
 	[_mutableObservationVectors addObject:observation];
 }

@@ -3,8 +3,8 @@
 
 @import Foundation;
 
-@interface NSSet (DHMap)
+@interface NSSet<ObjectType> (DHMap)
 
-- (NSSet *)dh_setByMappingObjectsUsingMap:(id (^)(id object))map;
+- (NSSet *)dh_setByMappingObjectsUsingMap:(id (^)(ObjectType object))map;
 
 @end
